@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Movie Database (TMBD)</title>
+  <!-- Añadimos el favicon e importamos estilos bootstrap (incluyendo iconos)-->
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link href='https://fonts.googleapis.com/css?family=Source Sans Pro' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar_style.css">
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+  <div class="page-wrap">
+
+
+    <header class="normal_menu">
+      <div class="container_menu">
+        <div class="navbar_content">
+          <div class="navbar-section1">
+            <a class="logo" href="index.html">
+              <img src="img/logo.svg" alt="Logo" width="154" height="20" class="d-inline-block align-text-top">
+            </a>
+            <ul class="navegador1 a-menu">
+              <li class="nav-item item_section">
+                <a class="nav-link" aria-current="page" href="">Películas</a>
+
+                <!-- <div class="animation-menu">
+                  <ul class="a-menu-group a-popup">
+                    <li class="a-menu-item">
+                      <a href="" class="a-menu-link">Popular</a>
+                    </li>
+                    <li class="a-menu-item">
+                      <a href="" class="a-menu-link">En cartelera</a>
+                    </li>
+                    <li class="a-menu-item">
+                      <a href="" class="a-menu-link">Próximamente</a>
+                    </li>
+                    <li class="a-menu-item">
+                      <a href="" class="a-menu-link">Mejor valoradas</a>
+                    </li>
+                  </ul>
+                </div> -->
+
+              </li>
+              <li class="nav-item item_section">
+                <a class="nav-link" href="">Programas de televisión</a>
+              </li>
+              <li class="nav-item item_section">
+                <a class="nav-link" href="">Personas</a>
+              </li>
+              <li class="nav-item item_section">
+                <a class="nav-link" href="">Más</a>
+              </li>
+            </ul>
+          </div>
+          <div class="navbar-section2">
+            <ul class="navegador2">
+              <li class="item_section2 plus">
+                <a class="plus-link" href="#">
+                  <span class="glyphicons_v2 plus_white"></span>
+                </a>
+              </li>
+              <li class="translate">
+                <div>es</div>
+              </li>
+              <li class="item_section2 notifications">
+                <a class="bell-link glyphicons_v2" href="#">
+                  <i class="bi bi-bell-fill"></i>
+                </a>
+              </li>
+              <li class="item_section2 user">
+                <a class="avatar_link" aria-current="page" href="#">
+                  <div class="avatar">
+                    <img src="https://www.gravatar.com/avatar/fee526fff81173d3cedb3e9e21b0ffe8.jpg?s=32"
+                      srcset="https://www.gravatar.com/avatar/fee526fff81173d3cedb3e9e21b0ffe8.jpg?s=32 1x, https://www.gravatar.com/avatar/fee526fff81173d3cedb3e9e21b0ffe8.jpg?s=64 2x"
+                      alt="AranVmore">
+                  </div>
+                </a>
+              </li>
+              <li class="item_section2 search">
+                <a class="search_nav">
+                  <span class="glyphicons_v2 search_blue"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- <main class="row justify-content-center contenido"> -->
+    <main id="main" class="contenido">
+      <section class="content-section section_index" style="background-image: url('img/banner3.jpg');">
+        <div class="cubierta">
+          <div class="content_columns">
+            <div class="title">
+              <h2>Bienvenidos.</h2>
+              <h3>Millones de películas, programas de televisión y personas por descubrir. Explora ahora.</h3>
+            </div>
+            <div class="search">
+              <form id="inner_search_form" action="#" method="get">
+                <input id="input_search_form" type="text" dir="auto" name="query" tabindex="1" autocorrect="off"
+                  autofill="off" placeholder="Buscar una película, programa de televisión, persona......"
+                  autocomplete="off" spellcheck="false" value>
+                <input type="submit" value="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content-section tendencias no_pad">
+        <div class="column-wrapper">
+          <div class="contenido-wrapper wrap">
+            <div class="column">
+              <div class="column-header">
+                <h2>Tendencias</h2>
+                <div class="selector-tendencia">
+                  <div class="selector">
+                    <div class="btn-tendencia">
+                      <h3>
+                        <a href="">
+                          Hoy
+                          <span></span>
+                        </a>
+                      </h3>
+                      <div class="background"></div>
+                    </div>
+                    <div class="btn-tendencia">
+                      <h3>
+                        <a href="">
+                          Esta semana
+                          <span></span>
+                        </a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="tendencia-scroller" class="media scroller-wrap">
+                <div class="column-content flex scroller loaded" id="card-container">
+                  <!-- contenido cartas de TENDENCIAS -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section no_pad bg-image trailer">
+        <div class="column-wrapper">
+          <div id="trailer-scroller" class="media scroller-wrap">
+          <div class="contenido-wrapper wrap">
+            <div class="column">
+              <div class="column-header">
+                <h2>Últimos avances</h2>
+                <div class="selector-tendencia">
+                  <div class="selector">
+                    <div class="btn-tendencia">
+                      <h3><a href="">En streaming
+                          <span></span>
+                        </a>
+                      </h3>
+                      <div class="background"></div>
+                    </div>
+                    <div class="btn-tendencia">
+                      <h3><a href="">Esta semana
+                          <span></span>
+                        </a>
+                      </h3>
+                    </div>
+                    <div class="btn-tendencia">
+                      <h3><a href="">En alquiler
+                          <span></span>
+                        </a>
+                      </h3>
+                    </div>
+                    <div class="btn-tendencia">
+                      <h3><a href="">En cines
+                          <span></span>
+                        </a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div class="column-content flex scroller loaded" id="card-trailers">
+                  <!-- contenido cartas de TRAILERS -->
+                  <div class="card video style2 true" data-bg-image="">
+                    <div class="image">
+                      <div class="wrapper">
+                        <a href="#" class="image play-trailer" data-id="" data-title="" title="">
+                          <img src="img/trailer-cover1.jpg" alt="" class="backdrop" loading="lazy">
+                          <div class="play">
+                            <span class="glyphicons_v2 play invert svg"></span>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="options" data-media-type="tv" data-role="tooltip"></div>
+                    </div>
+                    <div class="content"></div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <section class="content-section no_pad">
+        <div class="column-wrapper">
+          <div class="contenido-wrapper wrap">
+            <div class="column">
+              <div class="column-header">
+                <h2>Lo más popular</h2>
+                <div class="selector-tendencia">
+                  <div class="selector">
+                    <div class="btn-tendencia">
+                      <h3><a href="">En streaming
+                          <span></span>
+                        </a>
+                      </h3>
+                      <div class="background"></div>
+                    </div>
+                    <div class="btn-tendencia">
+                      <h3><a href="">Esta semana
+                          <span></span>
+                        </a>
+                      </h3>
+                    </div>
+                    <div class="btn-tendencia">
+                      <h3><a href="">En alquiler
+                          <span></span>
+                        </a>
+                      </h3>
+                    </div>
+                    <div class="btn-tendencia">
+                      <h3><a href="">En cines
+                          <span></span>
+                        </a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="tendencia-scroller" class="media scroller-wrap">
+                <div class="column-content flex scroller loaded" id="card-popular">
+                  <!-- contenido cartas de TENDENCIAS -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section no_pad">
+        <div class="column-wrapper">
+          <div class="contenido-wrapper wrap">
+            <div class="column">
+              <div class="column-header">
+                <h2>Ver gratis</h2>
+                <div class="selector-tendencia">
+                  <div class="selector">
+                    <div class="btn-tendencia">
+                      <h3><a href="">Películas
+                          <span></span>
+                        </a>
+                      </h3>
+                      <div class="background"></div>
+                    </div>
+                    <div class="btn-tendencia">
+                      <h3><a href="">Televisión
+                          <span></span>
+                        </a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="tendencia-scroller" class="media scroller-wrap">
+                <div class="column-content flex scroller loaded" id="card-gratis">
+                  <!-- contenido cartas de TENDENCIAS -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section clasificacion">
+        <div class="column-wrapper">
+          <div class="contenido-wrapper wrap">
+            <div class="column">
+              <div class="column-header">
+                <h2>Tabla de clasificación</h2>
+                <div>
+                  <p>
+                    <span class="dot all"></span>
+                      Todas las ediciones
+                  </p>
+                  <p>
+                    <span class="dot week"></span>
+                      Ediciones esta semana
+                  </p>
+                </div>
+              </div>
+
+              <div class="column-content" id="tabla-clasificacion">
+                <!-- TABLA DE CLASIFICACIONES -->
+                <ol class="clasificacion">
+                  <li>
+                    <span class="avatar">
+                      <a href="#">
+                        <img src="img/avatar1.jpeg" alt="" class="avatar">
+                      </a>
+                    </span>
+                    <div class="data">
+                      <h3>
+                        <a href="#">heli5m</a>
+                      </h3>
+                      <div class="meter all">
+                        <div class="barra" style="width: 21%;"></div>
+                        <h4>595</h4>
+                      </div>
+                      <div class="meter week">
+                        <div class="barra" style="width: 100%;"></div>
+                        <h4>19.853</h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="avatar">
+                      <a href="#">
+                        <img src="img/avatar1.jpeg" alt="" class="avatar">
+                      </a>
+                    </span>
+                    <div class="data">
+                      <h3>
+                        <a href="#">heli5m</a>
+                      </h3>
+                      <div class="meter all">
+                        <div class="barra" style="width: 21%;"></div>
+                        <h4>595</h4>
+                      </div>
+                      <div class="meter week">
+                        <div class="barra" style="width: 100%;"></div>
+                        <h4>19.853</h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="avatar">
+                      <a href="#">
+                        <img src="img/avatar1.jpeg" alt="" class="avatar">
+                      </a>
+                    </span>
+                    <div class="data">
+                      <h3>
+                        <a href="#">heli5m</a>
+                      </h3>
+                      <div class="meter all">
+                        <div class="barra" style="width: 21%;"></div>
+                        <h4>595</h4>
+                      </div>
+                      <div class="meter week">
+                        <div class="barra" style="width: 100%;"></div>
+                        <h4>19.853</h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="avatar">
+                      <a href="#">
+                        <img src="img/avatar1.jpeg" alt="" class="avatar">
+                      </a>
+                    </span>
+                    <div class="data">
+                      <h3>
+                        <a href="#">heli5m</a>
+                      </h3>
+                      <div class="meter all">
+                        <div class="barra" style="width: 21%;"></div>
+                        <h4>595</h4>
+                      </div>
+                      <div class="meter week">
+                        <div class="barra" style="width: 100%;"></div>
+                        <h4>19.853</h4>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <footer class="single-column">
+    <nav>
+      <div class="join">
+        <img src="img/blue_square_2.svg" alt="The Movie Database (TMDB)" width="130" height="94">
+        <a class="rounded logged_in" href="/u/AranVmore">Hola AranVmore!</a>
+      </div>
+      <div>
+        <h3>Lo básico</h3>
+        <ul>
+          <li><a href="/about">Sobre TMDB</a></li>
+          <li><a href="/about/staying-in-touch">Contacto</a></li>
+          <li><a href="/talk">Foros de ayuda</a></li>
+          <li><a href="/documentation/api">API</a></li>
+          <li><a href="https://status.themoviedb.org/" target="_blank" rel="noopener">Estado del sistema</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Participa</h3>
+        <ul>
+          <li><a href="/bible"><span class="glyphicons glyphicons-asterisk"></span> Guía de aportaciones</a></li>
+          <li><a href="/movie/new">Añadir nueva película</a></li>
+          <li><a href="/tv/new">Añadir nuevo programa de tv</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Comunidad</h3>
+        <ul>
+          <li><a href="/documentation/community/guidelines">Directrices</a></li>
+          <li><a href="/discuss">Discusiones</a></li>
+          <li><a href="/leaderboard">Tabla de clasificación</a></li>
+          <li><a href="https://twitter.com/themoviedb" target="_blank" rel="noopener">Twitter</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="/documentation/website/terms-of-use">Términos de uso</a></li>
+          <li><a href="/documentation/api/terms-of-use">Términos de uso de la API</a></li>
+          <li><a href="/privacy-policy">Política de privacidad</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section>Aranzazu - 2023</section>
+  </footer>
+
+
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
