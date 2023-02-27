@@ -1,0 +1,255 @@
+/* ESTILOS PARA LA BARRA DE NAVEGACIÓN SUPERIOR */
+/*-------------- NAVBAR MENU STAR --------------*/
+/*CUSTOM VARIABLES HERE*/
+.trigger-menu-wrapper {
+    transition: transform 0.4s;
+  }
+  .scroll-down .trigger-menu-wrapper {
+    transform: translate3d(0, -100%, 0);
+  }
+  .scroll-up .trigger-menu-wrapper {
+    transform: none;
+  }
+  .scroll-up:not(.menu-open) .trigger-menu-wrapper {
+    background: var(--lightpurple);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  }
+
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 64px;
+    width: 100%;
+    background-color: rgba(3,37,65,1);
+}
+
+header div.container_menu{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+header div.container-menu{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+header div.navbar_content{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 40px;
+}
+
+/*---------- NAVBAR_1 LEFT ----------*/
+header ul{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+header ul li{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+header div.navbar-section1{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow: visible;
+}
+header a.logo{
+    display: block;
+    margin-right: 16px;
+}
+header a.logo img{
+    width: 100%;
+    display: block;
+}
+header ul.navegador1 li.item_section{
+    color: white;
+    display: flex;
+    margin-right: 14px;
+}
+header ul.navegador1 li.item_section a.nav-link{
+    padding: 0.5rem;
+}
+
+/*---------- NAVBAR_2 RIGHT ----------*/
+header div.navbar-section2{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+header div.navbar-section2 ul{
+    justify-content: flex-end;
+    list-style: none;
+}
+/*UL NAVEGADOR 2*/
+header ul.navegador2 li{
+    margin-left: 30px;
+}
+header ul.navegador2 li.item_section2 a.nav-link{
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+}
+header div.navbar-section2{
+    color: white;
+}
+/*NAVEGADOR2 - GLYPHICONS*/
+header ul li span.glyphicons_v2 {
+    font-size: 1.4em;
+}
+.glyphicons_v2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1em;
+    min-height: 1em;
+    width: 1em;
+    height: 1em;
+    line-height: inherit;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: inherit;
+    box-sizing: border-box;
+}
+/*icon - plus*/
+header ul.navegador2 li:first-child{
+    margin-left: 0;
+}
+.glyphicons_v2.plus_white{
+    background-image: url('../img/plus-white.svg');
+}
+/*icon - translate*/
+header ul.navegador2 li.translate{
+    display: block;
+    padding: 4px 0;
+}
+header ul.navegador2 li.translate div{
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 300;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    width: 28px;
+    height: 28px;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 3px 5px;
+}
+header ul.navegador2 li.translate div:hover{
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    border: 1px solid white;
+}
+
+/*icon - user*/
+header ul.navegador2 li.user a div.avatar{
+    border-radius: 50%;
+    display: block;
+    overflow: hidden;
+    height: 32px;
+    width: 32px;
+}
+header ul li.user img{
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+/*icon - search_blue*/
+.glyphicons_v2.search_blue{
+ background-image: url('../img/search-blue.svg');
+}
+header ul li.item_section2 a.search_nav{
+    font-size: 1.3em;
+}
+/*-------------- NAVBAR MENU END ---------------*/
+
+/* Dropdown oculto */
+header div.animation-menu{
+    width: 197.5px;
+    height: 138px;
+    overflow: visible;
+    display: block;
+    position: absolute;
+    z-index: 10002;
+    top: 40px;
+    left: 0px;
+}
+
+header div.animation-menu ul.a-menu-group{
+    max-height: 895px;
+    overflow: auto;
+    position: absolute;
+    font-size: 16px;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-stretch: 100%;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    display: block;
+    transform: translateY(0px);
+}
+.a-menu-group{
+    border-color: rgba(0,0,0,0.15);
+    color: #212529;
+    background-color: #fff;
+}
+header div.animation-menu ul.a-popup{
+    border-radius: 0.25rem;
+    border-width: 1px;
+    border-style: solid;
+    box-sizing: border-box;
+}
+
+
+header div.animation-menu .a-menu-group, .a-menu-item{
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+
+header div.animation-menu .a-menu-item{
+    border-width: 0;
+    outline: 0;
+}
+
+header div.animation-menu a.a-menu-link{
+    outline: 0;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    color: #000;
+    font-weight: 400;
+    text-decoration: none;
+    align-items: center;
+    position: relative;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
