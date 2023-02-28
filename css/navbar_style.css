@@ -1,20 +1,5 @@
 /* ESTILOS PARA LA BARRA DE NAVEGACIÓN SUPERIOR */
 /*-------------- NAVBAR MENU STAR --------------*/
-/*CUSTOM VARIABLES HERE*/
-.trigger-menu-wrapper {
-    transition: transform 0.4s;
-  }
-  .scroll-down .trigger-menu-wrapper {
-    transform: translate3d(0, -100%, 0);
-  }
-  .scroll-up .trigger-menu-wrapper {
-    transform: none;
-  }
-  .scroll-up:not(.menu-open) .trigger-menu-wrapper {
-    background: var(--lightpurple);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
-  }
-
 
 header{
     display: flex;
@@ -184,68 +169,7 @@ header ul li.item_section2 a.search_nav{
 /*-------------- NAVBAR MENU END ---------------*/
 
 /* Dropdown oculto */
-header div.animation-menu{
-    width: 197.5px;
-    height: 138px;
-    overflow: visible;
-    display: block;
-    position: absolute;
-    z-index: 10002;
-    top: 40px;
-    left: 0px;
-}
 
-header div.animation-menu ul.a-menu-group{
-    max-height: 895px;
-    overflow: auto;
-    position: absolute;
-    font-size: 16px;
-    font-family: "Source Sans Pro", Arial, sans-serif;
-    font-stretch: 100%;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    display: block;
-    transform: translateY(0px);
-}
-.a-menu-group{
-    border-color: rgba(0,0,0,0.15);
-    color: #212529;
-    background-color: #fff;
-}
-header div.animation-menu ul.a-popup{
-    border-radius: 0.25rem;
-    border-width: 1px;
-    border-style: solid;
-    box-sizing: border-box;
-}
-
-
-header div.animation-menu .a-menu-group, .a-menu-item{
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-
-
-header div.animation-menu .a-menu-item{
-    border-width: 0;
-    outline: 0;
-}
-
-header div.animation-menu a.a-menu-link{
-    outline: 0;
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: row;
-    color: #000;
-    font-weight: 400;
-    text-decoration: none;
-    align-items: center;
-    position: relative;
-    white-space: nowrap;
-    cursor: pointer;
-}
 
 
 
