@@ -272,6 +272,21 @@ div.contenido-wrapper.wrap{
     flex-wrap: wrap;
 }
 
+/* cambio de botones */
+div.selector div.background {
+    z-index: -1;
+    background: rgba(3,37,65, 1);
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transition: left 0.25s;
+}
+
+
 
 /* menu de cards */
 

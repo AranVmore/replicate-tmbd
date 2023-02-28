@@ -54,7 +54,7 @@
     tendencias();
 
     const popular = async () => {
-        var url = "https://api.themoviedb.org/3/discover/movie?api_key=10311be6279b14b1d25a5d7f76295bb3&watch_region=US&with_watch_monetization_types=flatrate";
+        var url = "https://api.themoviedb.org/3/discover/movie?api_key=10311be6279b14b1d25a5d7f76295bb3&with_watch_monetization_types=flatrate&watch_region=US";
         const api = await fetch(url); //url + valor pagina
         const data = await api.json(); //de cada una obtendremos una respuesta en json
         // console.log(data);
@@ -106,6 +106,7 @@
 
     const gratuitas = async () => {
         var url = "https://api.themoviedb.org/3/discover/movie?api_key=10311be6279b14b1d25a5d7f76295bb3&watch_region=US&with_watch_monetization_types=free";
+        
         const api = await fetch(url); //url + valor pagina
         const data = await api.json(); //de cada una obtendremos una respuesta en json
         // console.log(data);
@@ -154,7 +155,7 @@
     }
     gratuitas();
 
-    const clasificacion = async () => {
+    const trailers = async () => {
         var url = "https://www.themoviedb.org/leaderboard";
         const api = await fetch(url); //url + valor pagina
         const data = await api.json(); //de cada una obtendremos una respuesta en json
@@ -203,4 +204,4 @@
         });    
         
     }
-    clasificacion();
+    trailers();
