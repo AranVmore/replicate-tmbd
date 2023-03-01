@@ -1,10 +1,11 @@
+// CAMBIAR SCROLL BARRA DE NAVEGACIÓN 
 
 
 
 
 
     const tendencias = async () => {
-        var url = "https://api.themoviedb.org/3/trending/all/day?api_key=10311be6279b14b1d25a5d7f76295bb3";
+        let url = "https://api.themoviedb.org/3/trending/all/day?api_key=10311be6279b14b1d25a5d7f76295bb3";
         const api = await fetch(url); //url + valor pagina
         const data = await api.json(); //de cada una obtendremos una respuesta en json
         // console.log(data);
@@ -19,7 +20,7 @@
             divItem.innerHTML = `
             <div class="image">
                 <div class="wrapper">
-                <a href="#" class="image" title="">
+                <a href="#" class="image" title="" id="btn-selected">
                     <img src="https://www.themoviedb.org/t/p/w220_and_h330_face/${item.poster_path}" alt="" class="poster">
                 </a>
                 </div>
@@ -54,7 +55,7 @@
     tendencias();
 
     const popular = async () => {
-        var url = "https://api.themoviedb.org/3/discover/movie?api_key=10311be6279b14b1d25a5d7f76295bb3&with_watch_monetization_types=flatrate&watch_region=US";
+        let url = "https://api.themoviedb.org/3/discover/movie?api_key=10311be6279b14b1d25a5d7f76295bb3&with_watch_monetization_types=flatrate&watch_region=US";
         const api = await fetch(url); //url + valor pagina
         const data = await api.json(); //de cada una obtendremos una respuesta en json
         // console.log(data);
@@ -105,7 +106,7 @@
 
 
     const gratuitas = async () => {
-        var url = "https://api.themoviedb.org/3/discover/movie?api_key=10311be6279b14b1d25a5d7f76295bb3&watch_region=US&with_watch_monetization_types=free";
+        let url = "https://api.themoviedb.org/3/discover/movie?api_key=10311be6279b14b1d25a5d7f76295bb3&watch_region=US&with_watch_monetization_types=free";
         
         const api = await fetch(url); //url + valor pagina
         const data = await api.json(); //de cada una obtendremos una respuesta en json
@@ -156,7 +157,7 @@
     gratuitas();
 
     const trailers = async () => {
-        var url = "https://www.themoviedb.org/leaderboard";
+        let url = "https://www.themoviedb.org/leaderboard";
         const api = await fetch(url); //url + valor pagina
         const data = await api.json(); //de cada una obtendremos una respuesta en json
         console.log(data);
@@ -205,3 +206,9 @@
         
     }
     trailers();
+
+
+    // OPCIÓN PARA CAMBIAR BOTONES DE COLOR
+    const boton = document.getElementById("btn-selected"); boton.addEventListener("click", ()=>{ 
+        boton.style.color = "white"; boton.style.backgroundColor = "green"; 
+    });
