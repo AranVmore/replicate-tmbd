@@ -19,7 +19,6 @@
   <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/navbar_style.css">
-  <script src="js/main.js"></script>
 </head>
 
 <body>
@@ -110,21 +109,21 @@
               <div class="column-header">
                 <h2>Tendencias</h2>
                 <div class="selector-tendencia">
-                  <div class="selector" id="probar" onclick="cambiaColor();">
-                    <div class="btn-tendencia">
+                  <div class="selector">
+                    <div class="btn-tendencia selected" id="botonhoy" onclick="cambiaColor(event);">
                       <h3>
-                        <a href="">
+                        <a href="day" id="day">
                           Hoy
-                          <span></span>
+                          <!-- <span></span> -->
                         </a>
                       </h3>
                       <div class="background"></div>
                     </div>
-                    <div class="btn-tendencia"  id="prueba">
+                    <div class="btn-tendencia" id="botonsemana" onclick="cambiaColor2(event);">
                       <h3>
-                        <a href="">
+                        <a href="week" id="week">
                           Esta semana
-                          <span></span>
+                          <!-- <span></span> -->
                         </a>
                       </h3>
                     </div>
@@ -441,6 +440,7 @@
 
 
   </div>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

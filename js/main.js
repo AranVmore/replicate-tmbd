@@ -16,11 +16,33 @@ window.onscroll = function () {
     prevScrollpos = currentScrollPos;
 }
 
+var date = 'day';
+
 // TRANSICIÓN DE LOS BOTONES
+function cambiaColor(event){
+    event.preventDefault();
+    document.getElementById("botonhoy").classList.add('selected');
+    document.getElementById("botonsemana").classList.remove('selected');
+    var ancla = document.getElementById("day");
+    date = ancla.getAttribute("href");
+    tendencias(date);
+}
+
+
+function cambiaColor2(event){
+    event.preventDefault();
+    document.getElementById("botonhoy").classList.remove('selected');
+    document.getElementById("botonsemana").classList.add('selected');
+    var ancla = document.getElementById("week");
+    date = ancla.getAttribute("href");
+    tendencias(date);
+}
+ 
 
 
 const tendencias = async () => {
-    let url = `https://api.themoviedb.org/3/trending/all/day?api_key=10311be6279b14b1d25a5d7f76295bb3`;
+
+    let url = `https://api.themoviedb.org/3/trending/all/${date}?api_key=10311be6279b14b1d25a5d7f76295bb3`;
     const api = await fetch(url); //url + valor pagina
     const data = await api.json(); //de cada una obtendremos una respuesta en json
     // console.log(data);

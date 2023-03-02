@@ -782,3 +782,16 @@ footer section{
     opacity: 0.1;
     font-size: 0.7em;
 }
+
+.today{
+    background-color: #000;
+    color: white;
+}
+
+.selected{
+    background: linear-gradient(to right, #c0fecf 0%, #1ed5a9 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
