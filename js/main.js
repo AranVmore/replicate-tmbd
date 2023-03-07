@@ -50,7 +50,21 @@ const tendencias = async () => {
     divPintar.innerHTML = "";
 
     data.results.map(item => {
-        //console.log(item);
+        // console.log(item);
+        // let title;
+        // title = item.title;
+        // if (typeof title === 'undefined') {
+        //     // console.log('Variable is undefined');
+        //     title = item.name;
+        //   }
+
+        //El operador typeof devuelve una cadena que indica el tipo del operando sin evaluarlo. operando es la cadena, variable, palabra clave u objeto para el que se devolverá su tipo.
+
+        let title = item.title;
+        let compr = (typeof title === 'undefined') ? item.name : item.title;
+
+        let date = item.release_date;
+        let alldates = (typeof date === 'undefined') ? item.first_air_date : item.release_date;
 
         divItem = document.createElement('div') //creamos div x cada element
         divItem.setAttribute("class", "card card-tendencia") //aplicamos clase
@@ -79,9 +93,9 @@ const tendencias = async () => {
                 </div>
                 </div>
                 <h2>
-                <a href="" title="${item.title}">${item.title}</a>
+                <a href="" title="${compr}">${compr}</a>
                 </h2>
-                <p>${item.release_date}</p>
+                <p>${alldates}</p>
             </div>
             `
         divPintar.appendChild(divItem);
